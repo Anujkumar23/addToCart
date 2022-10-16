@@ -17,14 +17,14 @@ products = [
     id: 2,
     name: "T-shirt ",
     price: 250,
-    imgSrc: "003.jpg",
+    imgSrc: "002.jpg",
     
   },
   {
     id: 3,
     name: "T-shirt ",
     price: 250,
-    imgSrc: "004.jpg",
+    imgSrc: "001.jpg",
      
   },
 ];
