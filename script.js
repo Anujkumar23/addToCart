@@ -4,27 +4,30 @@ products = [
     name: "T-shirt ",
     price: 200,
     imgSrc: "001.jpg",
-    
+    quantity:1,
   },
   {
     id: 1,
     name: "T-shirt ",
     price: 150,
     imgSrc: "002.jpg",
+     quantity:1,
   },
     
   {
     id: 2,
     name: "T-shirt ",
     price: 250,
-    imgSrc: "002.jpg",
+    imgSrc: "003.jpg",
+    quantity:1,
     
   },
   {
     id: 3,
     name: "T-shirt ",
     price: 250,
-    imgSrc: "001.jpg",
+    imgSrc: "004.jpg",
+    quantity:1,
      
   },
 ];
@@ -57,12 +60,11 @@ renderProduct();
 let cart = [];
 function addToCart(id) {
   // if product already exist in cart
-      if(cart.some((item)=>{
-        return item.id===id
-      })
-      ){
-        console.log("item already in cart")
-      }
+  let cartItemIndex=cart.findIndex((item) =>item.id === id);
+    
+  if(cartItemIndex!==-1){
+    cart[cartItemIndex].quantity++;
+  }
   else {
     let item = products.find((product) => product.id === id);
 
@@ -92,7 +94,7 @@ function renderCartItems() {
          $<span>${item.price}</span>
        </div>
        <div class="units ">
-        <input type="number" id="num" value=1 width=30%>
+        <input type="number" id="num" value=${item.quantity} width=30%>
         <button id="btn" onclick="removeCartItem(${item.id})">Remove</button>
        </div>  
 </div>`;
