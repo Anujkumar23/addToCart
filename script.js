@@ -46,13 +46,17 @@ function renderProduct() {
 
       <section class="info">
         <h4>T-shirt</h4>
-        <div class="price">
+        </section >
+
+          <section class="center-items">
+          <div class="price">
           <strong>$ ${product.price}</strong>
           </div>
-          </section>
+          
           <div class="button">
             <button onclick="addToCart(${product.id})">Add To Cart</button>
-            </div>`;
+            </div>
+            </section>`;
   });
 }
 renderProduct();
