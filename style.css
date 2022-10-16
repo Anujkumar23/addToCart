@@ -152,11 +152,8 @@
   .column3 {
     width: 30%;
   }
-  .cart-footer {
-    position: absolute;
-    bottom: 0;
-    right: 70;
-  }
+  
+  
   .title {
     text-align: center;
     padding: 10px;
